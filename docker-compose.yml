@@ -35,7 +35,7 @@ services:
             MYSQL_DATABASE: laravel
             MYSQL_ROOT_PASSWORD: root
             MYSQL_USER: laravel
-            MYSQL_PASSWORD: secret
+            MYSQL_PASSWORD: SoftIdea
         ports:
             - "3306:3306"
         volumes:
