@@ -9,10 +9,15 @@ class OrderDiscount extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['order_id', 'discount_rule_id', 'discount_amount', 'subtotal'];
+    protected $fillable = ['order_id', 'discount_rule_id', 'discount_reason', 'discount_amount', 'subtotal'];
 
     public function order()
     {
         return $this->belongsTo(Order::class);
+    }
+
+    public function discountRule()
+    {
+        return $this->belongsTo(DiscountRule::class);
     }
 }

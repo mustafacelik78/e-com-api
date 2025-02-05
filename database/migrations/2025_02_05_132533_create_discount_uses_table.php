@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('discount_uses', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('customer_id')->constrained('customers')->onDelete('cascade');
+            $table->foreignId('order_id')->constrained('orders')->onDelete('cascade');
             $table->foreignId('discount_rule_id')->constrained('discount_rules')->onDelete('cascade');
-            $table->unsignedInteger('usage_count')->default(0);
+            $table->foreignId('customer_id')->constrained('customers')->onDelete('cascade');
+            $table->integer('usage_count')->default(0);
             $table->timestamps();
         });
     }

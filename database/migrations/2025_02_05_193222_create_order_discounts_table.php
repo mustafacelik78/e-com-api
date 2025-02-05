@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('order_id')->constrained('orders')->onDelete('cascade');
             $table->foreignId('discount_rule_id')->constrained('discount_rules')->onDelete('cascade');
+            $table->string('discount_reason');
             $table->decimal('discount_amount', 10, 2);
             $table->decimal('subtotal', 10, 2);
             $table->timestamps();
