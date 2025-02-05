@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Discount extends Model
+class OrderDiscount extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['order_id', 'discount_reason', 'discount_amount', 'subtotal'];
+    protected $fillable = ['order_id', 'discount_rule_id', 'discount_amount', 'subtotal'];
 
     public function order()
     {

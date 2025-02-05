@@ -26,8 +26,12 @@ class ProductFactory extends Factory
         } else {
             $sale_price_new = $tmp_sale_price - $remainder + 9.99;
         }
+        $code = chr(rand(65, 90)) . str_pad(rand(1, 99), 3, '0', STR_PAD_LEFT);
+        $sentence = implode(' ', $this->faker->words(4));
+        $colors = ['Red', 'Blue', 'Green', 'Yellow', 'Purple', 'Orange', 'Black', 'White', 'Gray', 'Pink'];
+        $color = $colors[array_rand($colors)];
         return [
-            'name' => $this->faker->word() . ' ' . $this->faker->word() . ' ' . $this->faker->word() . ' ' . $this->faker->word(),
+            'name' => $code . ' ' . $sentence . ' ' . $color,
             'category' => $this->faker->numberBetween(1,10),
             'price' => $sale_price_new,
             'stock' => $this->faker->numberBetween(0,150),

@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('discounts', function (Blueprint $table) {
+        Schema::create('order_discounts', function (Blueprint $table) {
             $table->id();
             $table->foreignId('order_id')->constrained('orders')->onDelete('cascade');
-            $table->string('discount_reason');
+            $table->foreignId('discount_rule_id')->constrained('discount_rules')->onDelete('cascade');
             $table->decimal('discount_amount', 10, 2);
             $table->decimal('subtotal', 10, 2);
             $table->timestamps();
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('discounts');
+        Schema::dropIfExists('order_discounts');
     }
 };
