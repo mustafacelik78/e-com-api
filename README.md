@@ -9,7 +9,7 @@ Sistem, **RESTful API** standartlarına uygun çalışmakta olup, sipariş yöne
 
 - **Laravel 11** tabanlı geliştirilmiştir
 - **Docker** ile kolay kurulum ve deployment
-- **Sanctum** ile token bazlı kimlik doğrulama
+- **Sanctum** ile token bazlı kimlik doğrulama.
 - **Dinamik indirim hesaplama** sistemi
 - **RESTful API** prensiplerine uygun geliştirilmiştir
 - **Swagger** ile API dokümentasyonu
@@ -47,6 +47,10 @@ docker-compose exec app php artisan migrate:fresh --seed
 ## 🔐 API Kullanımı
 
 ### ✅ Kimlik Doğrulama
+
+Register işlemi sonrası aldığınız token ile diğer servislere erişim sağlayabilirsiniz.
+Alternatif olarak:
+Kaydolduktan sonra Login işlemi sonrası aldığınız token ile diğer servislere erişebilirsiniz.
 
 **Kullanıcı kayıt olmak için:**
 ```http
