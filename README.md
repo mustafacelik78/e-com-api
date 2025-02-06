@@ -30,10 +30,16 @@ cp .env.example .env
 docker-compose up -d --build
 ```
 
+Bağımlılıkları Yükleme
+
+```bash
+docker-compose exec app composer install
+```
+
 Ardından, veritabanını oluşturmak için:
 
 ```bash
-docker-compose exec laravel_app php artisan migrate:fresh --seed
+docker-compose exec app php artisan migrate:fresh --seed
 ```
 
 ---
