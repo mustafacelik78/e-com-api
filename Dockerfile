@@ -12,9 +12,5 @@ RUN docker-php-ext-install pdo pdo_mysql
 
 # Laravel için eksik dizinleri oluştur ve izinleri ayarla
 RUN mkdir -p /var/www/storage /var/www/bootstrap/cache \
-    && chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
-
-# Laravel için eksik dizinleri oluştur ve izinleri ayarla
-RUN mkdir -p /var/www/storage /var/www/bootstrap/cache \
     && chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache \
     && chmod -R 775 /var/www/storage /var/www/bootstrap/cache
