@@ -78,6 +78,8 @@ API'nin detaylı dokümantasyonuna aşağıdaki bağlantıdan ulaşabilirsiniz:
 
 🔗 [Swagger Dokümantasyonu](http://localhost:8080/api/documentation)
 
+🔗 [Postman Koleksiyonu İçeriği](http://localhost:8080/e_com_api_postman_collection.json)
+
 ---
 
 ## 🖥️ PhpMyAdmin

@@ -1,0 +1,884 @@
+{
+	"info": {
+		"_postman_id": "29e8cecf-c581-400f-b54a-170f813976ff",
+		"name": "Idea",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14899233"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"mc test\",\n    \"email\": \"mctest@example.com\",\n    \"password\": \"mc123456\",\n    \"password_confirmation\": \"mc123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/api/register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"mc test\",\n    \"email\": \"mctest@example.com\",\n    \"password\": \"mc123456\",\n    \"password_confirmation\": \"mc123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.27.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Feb 2025 08:14:26 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"name\": \"mc test\",\n        \"email\": \"mctest@example.com\",\n        \"updated_at\": \"2025-02-06T08:14:26.000000Z\",\n        \"created_at\": \"2025-02-06T08:14:26.000000Z\",\n        \"id\": 2\n    },\n    \"token\": \"1|gGnA6qKPUUZ67EFVHhzrj0qIlcz9p9LbJkNfRPPJ7b427a71\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"mctest@example.com\",\n    \"password\": \"mc123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/api/login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"mctest@example.com\",\n    \"password\": \"mc123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.27.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Feb 2025 08:15:05 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 2,\n        \"name\": \"mc test\",\n        \"email\": \"mctest@example.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2025-02-06T08:14:26.000000Z\",\n        \"updated_at\": \"2025-02-06T08:14:26.000000Z\"\n    },\n    \"token\": \"2|i9J6rBKBbMku3sVPb7ZiCJpCe77vAup2mculZ3WL8f94b962\"\n}"
+				}
+			]
+		},
+		{
+			"name": "user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/api/user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.27.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Feb 2025 08:16:28 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"mc test\",\n    \"email\": \"mctest@example.com\",\n    \"email_verified_at\": null,\n    \"created_at\": \"2025-02-06T08:14:26.000000Z\",\n    \"updated_at\": \"2025-02-06T08:14:26.000000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"mctest@example.com\",\n    \"password\": \"mc123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/api/login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mctest@example.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "mc123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.27.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Feb 2025 14:17:45 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"You are logged out.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get_orders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/api/orders",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.27.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Feb 2025 08:16:51 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"customer_id\": 2,\n        \"total\": \"35749.84\",\n        \"created_at\": \"2025-02-06T08:16:42.000000Z\",\n        \"updated_at\": \"2025-02-06T08:16:42.000000Z\",\n        \"customer\": {\n            \"id\": 2,\n            \"name\": \"Barlas Tokatlıoğlu\",\n            \"since\": \"2011-08-14\",\n            \"revenue\": \"48909.59\",\n            \"created_at\": \"2025-02-06T08:14:18.000000Z\",\n            \"updated_at\": \"2025-02-06T08:14:18.000000Z\"\n        },\n        \"order_products\": [\n            {\n                \"id\": 1,\n                \"order_id\": 1,\n                \"product_id\": 371,\n                \"quantity\": 7,\n                \"unit_price\": \"259.99\",\n                \"total\": \"1819.93\",\n                \"created_at\": \"2025-02-06T08:16:42.000000Z\",\n                \"updated_at\": \"2025-02-06T08:16:42.000000Z\",\n                \"product\": {\n                    \"id\": 371,\n                    \"name\": \"R034 aut omnis velit deserunt Pink\",\n                    \"category\": 1,\n                    \"price\": \"259.99\",\n                    \"stock\": 27,\n                    \"created_at\": \"2025-02-06T08:14:18.000000Z\",\n                    \"updated_at\": \"2025-02-06T08:16:42.000000Z\"\n                }\n            },\n            {\n                \"id\": 2,\n                \"order_id\": 1,\n                \"product_id\": 412,\n                \"quantity\": 9,\n                \"unit_price\": \"3769.99\",\n                \"total\": \"33929.91\",\n                \"created_at\": \"2025-02-06T08:16:42.000000Z\",\n                \"updated_at\": \"2025-02-06T08:16:42.000000Z\",\n                \"product\": {\n                    \"id\": 412,\n                    \"name\": \"H036 expedita sunt esse quidem Green\",\n                    \"category\": 7,\n                    \"price\": \"3769.99\",\n                    \"stock\": 124,\n                    \"created_at\": \"2025-02-06T08:14:18.000000Z\",\n                    \"updated_at\": \"2025-02-06T08:16:42.000000Z\"\n                }\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "delete_order",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/orders/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete_order",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/orders/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.27.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Feb 2025 08:17:10 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "55"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Sipariş silindi.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "apply-discounts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/orders/1/apply-discounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"1",
+						"apply-discounts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/api/orders",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/orders/1/apply-discounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders",
+								"1",
+								"apply-discounts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.27.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Feb 2025 08:17:01 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"orderId\": 1,\n    \"discounts\": [\n        {\n            \"discountReason\": \"10_PERCENT_OVER_1000\",\n            \"discountAmount\": \"3574.98\",\n            \"subtotal\": \"32174.86\"\n        },\n        {\n            \"discountReason\": \"LIMITED_USE\",\n            \"discountAmount\": \"50.00\",\n            \"subtotal\": \"32124.86\"\n        }\n    ],\n    \"totalDiscount\": \"3624.98\",\n    \"discountedTotal\": \"32124.86\"\n}"
+				}
+			]
+		},
+		{
+			"name": "create_order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"customer_id\": 2,\n  \"items\": [\n    {\n      \"product_id\": 371,\n      \"quantity\": 7\n    },\n    {\n      \"product_id\": 412,\n      \"quantity\": 9\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create_order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"customer_id\": 2,\n  \"items\": [\n    {\n      \"product_id\": 371,\n      \"quantity\": 7\n    },\n    {\n      \"product_id\": 412,\n      \"quantity\": 9\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.27.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Feb 2025 08:16:42 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"customer_id\": 2,\n    \"total\": 35749.84,\n    \"updated_at\": \"2025-02-06T08:16:42.000000Z\",\n    \"created_at\": \"2025-02-06T08:16:42.000000Z\",\n    \"id\": 1\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "2|i9J6rBKBbMku3sVPb7ZiCJpCe77vAup2mculZ3WL8f94b962",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
