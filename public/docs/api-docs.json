@@ -1,0 +1,897 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Idea",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "noauthAuth": {
+        "type": "http",
+        "scheme": "noauth"
+      },
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {
+    "/api/register": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "register",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "name": "mc test",
+                  "email": "mctest@example.com",
+                  "password": "mc123456",
+                  "password_confirmation": "mc123456"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "noauthAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Server": {
+                "schema": {
+                  "type": "number",
+                  "example": "nginx/1.27.3"
+                }
+              },
+              "Content-Type": {
+                "schema": {
+                  "type": "string",
+                  "example": "application/json"
+                }
+              },
+              "Transfer-Encoding": {
+                "schema": {
+                  "type": "string",
+                  "example": "chunked"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string",
+                  "example": "keep-alive"
+                }
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "number",
+                  "example": "PHP/8.2.27"
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache, private"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Thu, 06 Feb 2025 08:14:26 GMT"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string",
+                  "example": "*"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "example": {
+                  "user": {
+                    "name": "mc test",
+                    "email": "mctest@example.com",
+                    "updated_at": "2025-02-06T08:14:26.000000Z",
+                    "created_at": "2025-02-06T08:14:26.000000Z",
+                    "id": 2
+                  },
+                  "token": "1|gGnA6qKPUUZ67EFVHhzrj0qIlcz9p9LbJkNfRPPJ7b427a71"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/login": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "email": "mctest@example.com",
+                  "password": "mc123456"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "noauthAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Server": {
+                "schema": {
+                  "type": "number",
+                  "example": "nginx/1.27.3"
+                }
+              },
+              "Content-Type": {
+                "schema": {
+                  "type": "string",
+                  "example": "application/json"
+                }
+              },
+              "Transfer-Encoding": {
+                "schema": {
+                  "type": "string",
+                  "example": "chunked"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string",
+                  "example": "keep-alive"
+                }
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "number",
+                  "example": "PHP/8.2.27"
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache, private"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Thu, 06 Feb 2025 08:15:05 GMT"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string",
+                  "example": "*"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "example": {
+                  "user": {
+                    "id": 2,
+                    "name": "mc test",
+                    "email": "mctest@example.com",
+                    "email_verified_at": null,
+                    "created_at": "2025-02-06T08:14:26.000000Z",
+                    "updated_at": "2025-02-06T08:14:26.000000Z"
+                  },
+                  "token": "2|i9J6rBKBbMku3sVPb7ZiCJpCe77vAup2mculZ3WL8f94b962"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/user": {
+      "get": {
+        "tags": [
+          "default"
+        ],
+        "summary": "user",
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Server": {
+                "schema": {
+                  "type": "number",
+                  "example": "nginx/1.27.3"
+                }
+              },
+              "Content-Type": {
+                "schema": {
+                  "type": "string",
+                  "example": "application/json"
+                }
+              },
+              "Transfer-Encoding": {
+                "schema": {
+                  "type": "string",
+                  "example": "chunked"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string",
+                  "example": "keep-alive"
+                }
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "number",
+                  "example": "PHP/8.2.27"
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache, private"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Thu, 06 Feb 2025 08:16:28 GMT"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string",
+                  "example": "*"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "example": {
+                  "id": 2,
+                  "name": "mc test",
+                  "email": "mctest@example.com",
+                  "email_verified_at": null,
+                  "created_at": "2025-02-06T08:14:26.000000Z",
+                  "updated_at": "2025-02-06T08:14:26.000000Z"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/logout": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "logout",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "email": "mctest@example.com",
+                  "password": "mc123456"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Server": {
+                "schema": {
+                  "type": "number",
+                  "example": "nginx/1.27.3"
+                }
+              },
+              "Content-Type": {
+                "schema": {
+                  "type": "string",
+                  "example": "application/json"
+                }
+              },
+              "Transfer-Encoding": {
+                "schema": {
+                  "type": "string",
+                  "example": "chunked"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string",
+                  "example": "keep-alive"
+                }
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "number",
+                  "example": "PHP/8.2.27"
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache, private"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Wed, 05 Feb 2025 14:17:45 GMT"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string",
+                  "example": "*"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "example": {
+                  "message": "You are logged out."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/orders": {
+      "get": {
+        "tags": [
+          "default"
+        ],
+        "summary": "get_orders",
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Server": {
+                "schema": {
+                  "type": "number",
+                  "example": "nginx/1.27.3"
+                }
+              },
+              "Content-Type": {
+                "schema": {
+                  "type": "string",
+                  "example": "application/json"
+                }
+              },
+              "Transfer-Encoding": {
+                "schema": {
+                  "type": "string",
+                  "example": "chunked"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string",
+                  "example": "keep-alive"
+                }
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "number",
+                  "example": "PHP/8.2.27"
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache, private"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Thu, 06 Feb 2025 08:16:51 GMT"
+                }
+              },
+              "X-RateLimit-Limit": {
+                "schema": {
+                  "type": "integer",
+                  "example": "60"
+                }
+              },
+              "X-RateLimit-Remaining": {
+                "schema": {
+                  "type": "integer",
+                  "example": "57"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string",
+                  "example": "*"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "example": [
+                  {
+                    "id": 1,
+                    "customer_id": 2,
+                    "total": "35749.84",
+                    "created_at": "2025-02-06T08:16:42.000000Z",
+                    "updated_at": "2025-02-06T08:16:42.000000Z",
+                    "customer": {
+                      "id": 2,
+                      "name": "Barlas Tokatlıoğlu",
+                      "since": "2011-08-14",
+                      "revenue": "48909.59",
+                      "created_at": "2025-02-06T08:14:18.000000Z",
+                      "updated_at": "2025-02-06T08:14:18.000000Z"
+                    },
+                    "order_products": [
+                      {
+                        "id": 1,
+                        "order_id": 1,
+                        "product_id": 371,
+                        "quantity": 7,
+                        "unit_price": "259.99",
+                        "total": "1819.93",
+                        "created_at": "2025-02-06T08:16:42.000000Z",
+                        "updated_at": "2025-02-06T08:16:42.000000Z",
+                        "product": {
+                          "id": 371,
+                          "name": "R034 aut omnis velit deserunt Pink",
+                          "category": 1,
+                          "price": "259.99",
+                          "stock": 27,
+                          "created_at": "2025-02-06T08:14:18.000000Z",
+                          "updated_at": "2025-02-06T08:16:42.000000Z"
+                        }
+                      },
+                      {
+                        "id": 2,
+                        "order_id": 1,
+                        "product_id": 412,
+                        "quantity": 9,
+                        "unit_price": "3769.99",
+                        "total": "33929.91",
+                        "created_at": "2025-02-06T08:16:42.000000Z",
+                        "updated_at": "2025-02-06T08:16:42.000000Z",
+                        "product": {
+                          "id": 412,
+                          "name": "H036 expedita sunt esse quidem Green",
+                          "category": 7,
+                          "price": "3769.99",
+                          "stock": 124,
+                          "created_at": "2025-02-06T08:14:18.000000Z",
+                          "updated_at": "2025-02-06T08:16:42.000000Z"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "create_order",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "customer_id": 2,
+                  "items": [
+                    {
+                      "product_id": 371,
+                      "quantity": 7
+                    },
+                    {
+                      "product_id": 412,
+                      "quantity": 9
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "headers": {
+              "Server": {
+                "schema": {
+                  "type": "number",
+                  "example": "nginx/1.27.3"
+                }
+              },
+              "Content-Type": {
+                "schema": {
+                  "type": "string",
+                  "example": "application/json"
+                }
+              },
+              "Transfer-Encoding": {
+                "schema": {
+                  "type": "string",
+                  "example": "chunked"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string",
+                  "example": "keep-alive"
+                }
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "number",
+                  "example": "PHP/8.2.27"
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache, private"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Thu, 06 Feb 2025 08:16:42 GMT"
+                }
+              },
+              "X-RateLimit-Limit": {
+                "schema": {
+                  "type": "integer",
+                  "example": "60"
+                }
+              },
+              "X-RateLimit-Remaining": {
+                "schema": {
+                  "type": "integer",
+                  "example": "58"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string",
+                  "example": "*"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "example": {
+                  "customer_id": 2,
+                  "total": 35749.84,
+                  "updated_at": "2025-02-06T08:16:42.000000Z",
+                  "created_at": "2025-02-06T08:16:42.000000Z",
+                  "id": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/orders/2": {
+      "delete": {
+        "tags": [
+          "default"
+        ],
+        "summary": "delete_order",
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Server": {
+                "schema": {
+                  "type": "number",
+                  "example": "nginx/1.27.3"
+                }
+              },
+              "Content-Type": {
+                "schema": {
+                  "type": "string",
+                  "example": "application/json"
+                }
+              },
+              "Transfer-Encoding": {
+                "schema": {
+                  "type": "string",
+                  "example": "chunked"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string",
+                  "example": "keep-alive"
+                }
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "number",
+                  "example": "PHP/8.2.27"
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache, private"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Thu, 06 Feb 2025 08:17:10 GMT"
+                }
+              },
+              "X-RateLimit-Limit": {
+                "schema": {
+                  "type": "integer",
+                  "example": "60"
+                }
+              },
+              "X-RateLimit-Remaining": {
+                "schema": {
+                  "type": "integer",
+                  "example": "55"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string",
+                  "example": "*"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "example": {
+                  "message": "Sipariş silindi."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/orders/1/apply-discounts": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "apply-discounts",
+        "requestBody": {
+          "content": {}
+        },
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "application/json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Server": {
+                "schema": {
+                  "type": "number",
+                  "example": "nginx/1.27.3"
+                }
+              },
+              "Content-Type": {
+                "schema": {
+                  "type": "string",
+                  "example": "application/json"
+                }
+              },
+              "Transfer-Encoding": {
+                "schema": {
+                  "type": "string",
+                  "example": "chunked"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string",
+                  "example": "keep-alive"
+                }
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "number",
+                  "example": "PHP/8.2.27"
+                }
+              },
+              "Cache-Control": {
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache, private"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Thu, 06 Feb 2025 08:17:01 GMT"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string",
+                  "example": "*"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "example": {
+                  "orderId": 1,
+                  "discounts": [
+                    {
+                      "discountReason": "10_PERCENT_OVER_1000",
+                      "discountAmount": "3574.98",
+                      "subtotal": "32174.86"
+                    },
+                    {
+                      "discountReason": "LIMITED_USE",
+                      "discountAmount": "50.00",
+                      "subtotal": "32124.86"
+                    }
+                  ],
+                  "totalDiscount": "3624.98",
+                  "discountedTotal": "32124.86"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
