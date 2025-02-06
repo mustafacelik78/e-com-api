@@ -94,6 +94,14 @@ PhpMyAdmin'e aşağıdaki bağlantıdan erişebilirsiniz:
 
 ---
 
+## 🖥️ Telescope
+
+Telescop'a aşağıdaki bağlantıdan erişebilirsiniz:
+
+🔗 [Telescope](http://localhost:8080/telescope)
+
+---
+
 ## 📊 İndirim Kuralları
 
 İndirimler için **dinamik bir yapı** oluşturuldu. `discount_rules` tablosunda yer alan **type** alanına göre indirimin türü belirlenmektedir.
